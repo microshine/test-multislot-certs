@@ -1,0 +1,32 @@
+{
+  "name": "test-multislot-certs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "build": "tsc",
+    "start": "node ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microshine/test-multislot-certs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microshine/test-multislot-certs/issues"
+  },
+  "homepage": "https://github.com/microshine/test-multislot-certs#readme",
+  "dependencies": {
+    "asn1js": "^2.0.15",
+    "node-webcrypto-p11": "^1.1.26",
+    "pkijs": "^2.1.11"
+  },
+  "devDependencies": {
+    "@types/asn1js": "0.0.1",
+    "@types/node": "^8.5.1"
+  }
+}
