@@ -119,6 +119,12 @@ async function Test1() {
         pin: "12345",
         readWrite: true,
     });
+
+    slot1.certStorage.clear();
+    slot1.keyStorage.clear();
+    slot2.certStorage.clear();
+    slot2.keyStorage.clear();
+
     //#region Create CA
     const caKeys = await GenerateKeys(slot1);
     const caName: X500Name = {
@@ -171,7 +177,7 @@ async function Test1() {
     const cert3 = await CreateCertificate(
         slot1,
         {
-            serialNumber: new Buffer([0, 0, 0, 0, 0, 0, 0, 2]),
+            serialNumber: new Uint8Array([0, 0, 0, 0, 0, 0, 0, 3]),
             subject: subjectName,
             issuer: caName,
             publicKey: cert3PubKey,
